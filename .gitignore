@@ -1,0 +1,4 @@
+.cache/
+ovmf/
+build/
+compile_commands.json
