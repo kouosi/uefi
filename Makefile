@@ -34,6 +34,7 @@ ${BUILD_DIR}/loader.efi: $(CC_HDR) $(OBJS) Makefile
 .PHONY: ${BUILD_DIR}/%.o
 ${BUILD_DIR}/%.o: src/%.c Makefile
 	@echo "CC 	$<"
+	@mkdir -p $(@D)
 	@gcc $(CC_FLAG) -c $< -o $@
 
 ovmf/ovmf.fd:
